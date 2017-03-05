@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mulphys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="mulphys.xsd">
+	<time>
+		<start>0.0</start>
+		<step>1.0e-2</step>
+		<end>1.0</end>
+	</time>
+	<!-- DOMAINS -->
+
+<!--
+	<domain id="Coral" model="TAM">
+		<type>dynamic</type>
+		<geometry>
+			<bounds>-3.0 3.0 -3.0 3.0 -5.0 5.0</bounds>
+			<mesh>
+				<type>node_cell</type>
+				<nodes>
+					<number>4</number>
+					<coordinates>
+						 1.0  1.0  0.0
+						 1.0 -1.0  0.0
+						-1.0  0.0  1.0
+						-1.0  0.0 -1.0
+					</coordinates>
+				</nodes>
+				<cells>
+					<number>1</number>
+					<nodes>1 2 3 4</nodes>
+				</cells>
+			</mesh>
+		</geometry>
+		<tool>
+			<file>tool.cfg</file>
+		</tool>
+	</domain>
+-->
+<!-- TODO: check PFRG -->
+<!--
+	<domain id="ParticlesInABox" model="PRFG">
+		<type>dynamic</type>
+		<proc>0</proc>
+		<geometry>
+			<bounds>-8.0 8.0 -5.0 5.0 -5.0 5.0</bounds>
+			<shape>
+				<type>box</type> 
+				<dimensions>6 6 6</dimensions>
+				<boundary>8 9 4 4 4 4</boundary>
+			</shape>
+			<particles>
+				<type>balls</type>
+				<number>100</number>
+			</particles>
+			<transform>
+				<rotatex>-20.0</rotatex>
+				<rotatey>30.0</rotatey>
+				<rotatez>-10.0</rotatez>
+				<translate>2.0 7.0 1.0</translate>
+			</transform>
+		</geometry>
+	</domain>
+-->
+<!-- TODO: check Particles! -->
+<!--
+	<domain id="ParticlesInAPipe" model="Particles">
+		<type>dynamic</type>
+		<proc>1</proc>
+		<geometry>
+			<bounds>-3.0 3.0 -4.0 4.0 -4.0 4.0</bounds>
+			<shape>
+				<type>cylinder</type> 
+				<dimensions>8 10</dimensions>
+				<bounds>5.0 18.0</bounds>
+				<boundary>9 4 8</boundary>
+			</shape>
+			<particles>
+				<type>balls</type>
+				<number>100</number>
+			</particles>
+		</geometry>
+		<output>
+			<type>tecplot</type>
+			<file>particles.tec</file>
+		</output>
+	</domain>
+	<domain id="ParticlesInACube" model="Particles">
+		<proc>0</proc>
+		<type>dynamic</type>
+		<geometry>
+			<bounds>-5.0 5.0 -5.0 5.0 -5.0 5.0</bounds>
+			<shape>
+				<type>box</type> 
+				<dimensions>8 8 8</dimensions>
+				<boundary>8 9 4 4 4 4</boundary>
+			</shape>
+			<particles>
+				<type>balls</type>
+				<number>100</number>
+			</particles>
+		</geometry>
+		<output>
+			<type>tecplot</type>
+			<file>particles.tec</file>
+		</output>
+	</domain>
+-->
+<!-- TODO: CHECK Lattice -->
+<!--
+	<domain id="Diamond" model="Lattice"> 
+		<type>dynamic</type>
+		<geometry>
+			<bounds>-3 3 -3 3 -5 5</bounds>
+			<mesh>
+				<type>node_cell</type>
+				<nodes>
+					<number>1</number>
+					<coordinates>
+						0.0 0.0 0.0
+					</coordinates>
+				</nodes>
+				<cells>
+					<number>10</number>
+				</cells>
+			</mesh>
+		</geometry>
+	</domain>
+-->
+<!--
+	<domain id="Bifurcation" model="ParticleFlow">
+		<type>dynamic</type>
+		<geometry>
+			<bounds>-3 3 -3 3 -3 3</bounds>
+			<mesh>
+				<type>data_file</type>
+				<file>bif1.dat</file>
+			</mesh>
+			<particles>
+				<type>balls</type>
+				<number>100</number>
+			</particles>
+		</geometry>
+	</domain>
+-->
+	<domain id="Microbe" model="Membrane">
+		<type>dynamic</type>
+		<geometry>
+			<bounds>-3 3 -3 3 -3 3</bounds>
+			<mesh>
+				<type>data_file</type>
+				<file>microbe.dat</file>
+			</mesh>
+			<particles>
+				<type>balls</type>
+				<number>1500</number>
+			</particles>
+		</geometry>
+		<tool>
+			<file>needle.cfg</file>
+		</tool>
+	</domain>
+<!--
+-->
+	<!-- MODELS -->
+	<model id="TAM">
+		<type>0</type>
+	</model>
+	<model id="Membrane">
+		<type>2</type>
+	</model>
+	<model id="Lattice">
+		<type>3</type>
+	</model>
+	<model id="Particles">
+		<type>8</type>
+	</model>
+	<model id="ParticleFlow">
+		<type>11</type>
+	</model>
+	<model id="PRFG">
+		<type>12</type>
+	</model>
+</mulphys>

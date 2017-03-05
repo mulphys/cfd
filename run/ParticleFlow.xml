@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mulphys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="mulphys.xsd">
+	<time>
+		<start>0.0</start>
+		<step>1.0e-2</step>
+		<end>1.0</end>
+	</time>
+	<!-- DOMAINS -->
+
+	<domain id="Bifurcation" model="ParticleFlow">
+		<type>dynamic</type>
+		<geometry>
+			<bounds>-3 3 -3 3 -3 3</bounds>
+			<mesh>
+				<type>data_file</type>
+				<file>bif1.dat</file>
+			</mesh>
+			<particles>
+				<type>balls</type>
+				<number>100</number>
+			</particles>
+		</geometry>
+	</domain>
+	<!-- MODELS -->
+	<model id="TAM">
+		<type>0</type>
+	</model>
+	<model id="Membrane">
+		<type>2</type>
+	</model>
+	<model id="Lattice">
+		<type>3</type>
+	</model>
+	<model id="Particles">
+		<type>8</type>
+	</model>
+	<model id="ParticleFlow">
+		<type>11</type>
+	</model>
+	<model id="PRFG">
+		<type>12</type>
+	</model>
+</mulphys>

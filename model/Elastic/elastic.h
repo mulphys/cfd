@@ -1,0 +1,2 @@
+#define REAL	double
+

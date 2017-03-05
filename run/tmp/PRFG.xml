@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mulphys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="mulphys.xsd">
+	<time>
+		<start>0.0</start>
+		<step>1.0e-2</step>
+		<end>1.0</end>
+	</time>
+	<!-- DOMAINS -->
+
+	<domain id="ParticlesInABox" model="PRFG">
+		<type>dynamic</type>
+		<proc>0</proc>
+		<geometry>
+			<bounds>-8.0 8.0 -5.0 5.0 -5.0 5.0</bounds>
+			<shape>
+				<type>box</type> 
+				<dimensions>6 6 6</dimensions>
+				<boundary>8 9 4 4 4 4</boundary>
+			</shape>
+			<particles>
+				<type>balls</type>
+				<number>100</number>
+			</particles>
+			<transform>
+				<rotatex>-20.0</rotatex>
+				<rotatey>30.0</rotatey>
+				<rotatez>-10.0</rotatez>
+				<translate>2.0 7.0 1.0</translate>
+			</transform>
+		</geometry>
+	</domain>
+	<!-- MODELS -->
+	<model id="TAM">
+		<type>0</type>
+	</model>
+	<model id="Membrane">
+		<type>2</type>
+	</model>
+	<model id="Lattice">
+		<type>3</type>
+	</model>
+	<model id="Particles">
+		<type>8</type>
+	</model>
+	<model id="ParticleFlow">
+		<type>11</type>
+	</model>
+	<model id="PRFG">
+		<type>12</type>
+	</model>
+</mulphys>

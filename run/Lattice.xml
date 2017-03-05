@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mulphys xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="mulphys.xsd">
+	<time>
+		<start>0.0</start>
+		<step>1.0e-2</step>
+		<end>1.0</end>
+	</time>
+	<!-- DOMAINS -->
+
+	<domain id="Diamond" model="Lattice"> 
+		<type>dynamic</type>
+		<geometry>
+			<bounds>-3 3 -3 3 -5 5</bounds>
+			<mesh>
+				<type>node_cell</type>
+				<nodes>
+					<number>1</number>
+					<coordinates>
+						0.0 0.0 0.0
+					</coordinates>
+				</nodes>
+				<cells>
+					<number>0</number>
+				</cells>
+			</mesh>
+		</geometry>
+	</domain>
+	<!-- MODELS -->
+	<model id="TAM">
+		<type>0</type>
+	</model>
+	<model id="Membrane">
+		<type>2</type>
+	</model>
+	<model id="Lattice">
+		<type>3</type>
+	</model>
+	<model id="Particles">
+		<type>8</type>
+	</model>
+	<model id="ParticleFlow">
+		<type>11</type>
+	</model>
+	<model id="PRFG">
+		<type>12</type>
+	</model>
+</mulphys>
