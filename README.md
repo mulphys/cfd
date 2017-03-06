@@ -1,9 +1,8 @@
-# MulPhys: Multi-Physics Solver
-## Author: Andrei V Smirnov
-## Email: andrei.v.smirnov@gmail.com
+# CFD/FEM/DEM Solver 
+## Author: [Andrei V Smirnov](andrei.v.smirnov@gmail.com)
 
-[URL](http://mulphys.com)
+## [URL](http://mulphys.com)
 
-[DOCS](doc/)
+## [DOCS](doc/)
 
 
