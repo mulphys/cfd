@@ -1,9 +1,21 @@
-# Multi-Physics Solver 
+# Multi-Physics Solver ([URL](http://mulphys.com))
 ## Author: [Andrei V Smirnov](andrei.v.smirnov@gmail.com)
 
-Solves the equations for fluid flow (CFD), elasticity (FEM), and discrete element dynamics (DEM).
+![ParticleFlow](bidepi.png)
 
-## [URL](http://mulphys.com)
+MulPhys 
+solves the equations for fluid flow (CFD), elasticity (FEM), and discrete element dynamics (DEM).
+It is based on the Generalized Element Method (GEM) where the elements are geometrical constructs of various dimensionality representing different physical entities:
+
+- 0: points -> particles
+- 1: edges -> bonds
+- 2: faces -> membranes
+- 3: cells -> volumes
+
+Each entity can be assigned certain physical properties, such as mass,
+elasticity, viscosity, pressure, etc. depending on the physical model.  A
+mechanism can be provided for exchange of properties between the entities. This
+way both solid and fluid mechanics can be specified in a unified manner.
 
 ## [DOCS](doc/)
 
