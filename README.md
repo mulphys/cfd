@@ -17,7 +17,7 @@ elasticity, viscosity, pressure, etc., depending on the physical model.  A
 mechanism can be provided for exchange of properties between the entities. This
 way both solid and fluid mechanics can be specified in a unified manner.
 
-### [Method](doc/mulphys.pdf)
+## [Method](doc/mulphys.pdf)
 
 ## [DOCS](doc/)
 
