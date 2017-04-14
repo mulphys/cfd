@@ -21,13 +21,11 @@ way both solid and fluid mechanics can be specified in a unified manner.
 
 ## [DOCS](doc/)
 
-## Links
 
 ### [Overview](http://galacticbubble.com/mulphys/overview.html)
 ### Presentation
-
-#### [ODP](http://galacticbubble.com/mulphys/doc/mulphys.odp)
-#### [PPTX](http://galacticbubble.com/mulphys/doc/mulphys.pptx)
-#### [PPTX](http://galacticbubble.com/mulphys/doc/overview/)
+ [ODP](http://galacticbubble.com/mulphys/doc/mulphys.odp)
+ [PPTX](http://galacticbubble.com/mulphys/doc/mulphys.pptx)
+ [HTML](http://galacticbubble.com/mulphys/doc/overview/)
 
 ### [Papers](http://galacticbubble.com/mulphys/docs.html)
